@@ -100,7 +100,9 @@ class ObjectManagerPersister implements PersisterInterface
      */
     public function flush()
     {
-        $this->objectManager->flush();
+	$this->objectManager->flush();
+	$this->objectManager->clear();
+
     }
 
     /**
